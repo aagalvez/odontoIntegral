@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">  
+  <title>Hollow Bastion </title>
+  <link href="estilos/estilo-general.css" rel="stylesheet" type="text/css" />
+  <link href="estilos/estilo-menu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function cargaURL(url, titulo)
+{
+  window.frames['marco-desplegado'].location = url;
+  document.getElementById("titulo").innerHTML = titulo;
+}
+</script>
+</head>
+
+<body onload="cargaURL('presentacion.html','Presentaci&#243;n')">
+  <!-- Encabezado -->
+
+  <div class="titulo" id="titulo"></div>
+
+  <div class="encabezado"></div><!-- El menu -->
+
+  <div class="menu-izquierdo">
+    <h2>Menu Principal</h2>
+
+    <table class="menu-principal">
+      <tr>
+        <td class="item" onClick="cargaURL('presentacion.html','Presentaci&#243;n')">Presentaci&#243;n</td>
+      </tr>
+
+      <tr>
+        <td class="item" onClick="cargaURL('catalogo?tipo=1','Cat&#225;logo HTML')">Cat&#225;logo HTML</td>
+      </tr>
+
+      <tr>
+        <td class="item" onClick="cargaURL('vista.jsp','CRUD')">CRUD</td>
+      </tr>
+      
+   </table>
+
+    <div id="recuadro">
+      <span>Visitenos en:</span><br />
+      Calle:  Blvd.  <br/>
+      Bosque de las Palmas,<br />
+      Huixquilucan, M&#233;xico<br />
+      <br />
+      <span>Telefonos:</span><br />
+      0980
+    </div>
+  </div><!-- Area de desplegado -->
+  <iframe class="area-desplegado" id="marco-desplegado" name="marco-desplegado" frameborder="0"></iframe>
+</body>
+</html>
