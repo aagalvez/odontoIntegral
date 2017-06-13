@@ -1,6 +1,18 @@
 
-CREATE DATABASE IF NOT EXISTS odontologia;
-USE odontologia;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `cita`
+--
 
 DROP TABLE IF EXISTS `cita`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -42,6 +54,7 @@ CREATE TABLE `dentista` (
   `TelefonoDentista` int(11) NOT NULL,
   `PerfitlProfDentista` varchar(45) COLLATE utf8_esperanto_ci NOT NULL,
   `CorreoDentista` varchar(45) COLLATE utf8_esperanto_ci NOT NULL,
+  `PassDentista` varchar(15) COLLATE utf8_esperanto_ci DEFAULT NULL,
   PRIMARY KEY (`idDentista`),
   UNIQUE KEY `idDentista_UNIQUE` (`idDentista`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_esperanto_ci;
@@ -53,7 +66,7 @@ CREATE TABLE `dentista` (
 
 LOCK TABLES `dentista` WRITE;
 /*!40000 ALTER TABLE `dentista` DISABLE KEYS */;
-INSERT INTO `dentista` VALUES (1,'arturo',554932630,'Odontologo','prueba@gmail.com');
+INSERT INTO `dentista` VALUES (1,'arturo',554932630,'Odontologo','prueba@gmail.com',NULL);
 /*!40000 ALTER TABLE `dentista` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,6 +139,8 @@ CREATE TABLE `paciente` (
   `NombrePaciente` varchar(45) COLLATE utf8_esperanto_ci DEFAULT NULL,
   `TelefonoPaciente` int(11) DEFAULT NULL,
   `DireccionPaciente` varchar(45) COLLATE utf8_esperanto_ci DEFAULT NULL,
+  `passPaciente` varchar(15) COLLATE utf8_esperanto_ci DEFAULT NULL,
+  `correoPaciente` varchar(45) COLLATE utf8_esperanto_ci DEFAULT NULL,
   PRIMARY KEY (`idPaciente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_esperanto_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -136,7 +151,7 @@ CREATE TABLE `paciente` (
 
 LOCK TABLES `paciente` WRITE;
 /*!40000 ALTER TABLE `paciente` DISABLE KEYS */;
-INSERT INTO `paciente` VALUES (1000,'pepito',553256478,'Av cofradia de san miguel');
+INSERT INTO `paciente` VALUES (1000,'Xavier',553256478,'Av cofradia de san miguel',NULL,NULL);
 /*!40000 ALTER TABLE `paciente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,3 +242,14 @@ LOCK TABLES `tratamiento especial` WRITE;
 INSERT INTO `tratamiento especial` VALUES (250,'Intervencion dental de braquets','00:00:03',4000,1500);
 /*!40000 ALTER TABLE `tratamiento especial` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-06-13  8:46:31
