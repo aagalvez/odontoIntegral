@@ -1,0 +1,199 @@
+body{
+	margin: 0px;
+	background-color: #E1ECFF;
+	font-family: 'Poppins-Light'
+}
+
+.logo{							/*Logo dentro del header*/
+	float: left;
+}
+
+.head{							/*Propiedades del header*/
+	margin: auto;
+	height: 100px;
+	width: 100%;
+	background-color: white;
+	font-family: 'Poppins-Light';
+	background-color: #202073;
+}
+
+.head h1{							/*Alineación del contenido del header*/
+	float: left;
+	margin-left: 50px;
+}
+
+.info{							/*Alineación del contenido de la info*/
+	height: 100px;
+	float: right;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	color: rgba(137,137,137,.8);
+	background-color: white;
+	border-radius: 20px;
+}
+
+.menubar ul{							/*Características del menu de navegación*/
+	margin: 0;
+ 	width: 100%;
+ 	list-style: none;
+ 	padding: 0;
+ 	display: flex;
+ 	background: #334EB4;
+ 	color: #BFF9E2;
+ 	border-radius: 20px;
+}
+.menubar li{							/*Para que todos los elementos de ul abarquen todo el espacio*/
+	flex-grow: 1;
+}
+
+.menubar li a{							/*Características de los elementos li dentro del menu de navegación*/
+	display: block;
+	border-right: 1px solid rgba(4,3,47,.3); 
+	text-align: center;
+	padding: 15px 20px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #FFF;
+}
+
+.menubar li:last-of-type{							/*Características de los elementos li dentro del menu de navegación*/
+	border-right: #E1ECFF; 
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	color: #FFF;
+}
+
+.menubar li a:hover{						/*Lo que sucede cuando el cursor apunta a algun elemnto li del nav*/
+	background: rgba(60,7,101,1); 
+ 	color: #D1DAED;
+}
+
+.slider{							/*Características del slider*/
+	margin: auto;
+	width: 700px;
+	overflow: hidden;
+}
+
+.slider ul{							/*Eliminar relleno de la lista*/
+	display: flex;
+	width: 400%;
+	padding: 0;
+
+	animation: cambio 20s infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+
+.slider ul li{							/*Eliminar puntos de la lista*/
+	display: inline-block;
+	width: 100%;
+	list-style: none;
+}
+
+#recuadro{
+    text-align: center;
+    background-color: #9B9BFE;
+    border-radius: 5px;
+}
+
+p.texto{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+h1.reg{
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#quien{
+    padding-left: 20px;
+}
+
+div.box{
+    color: #626DFF;
+    background-color: #CAFDFF;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+input.btn1{
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Poppins-Light';
+    background-color: #F4FA38;
+}
+
+div.botones{
+    margin: 0 auto;
+}
+
+form.registro{
+    padding: 30px;
+    color: black;
+}
+
+.headphone{							/*Para celulares*/
+	display: none;
+}
+
+
+@media (max-width:570px){							/*Para celulares o tablets*/
+	body{
+		margin: 10px;
+		background-color: #E1ECFF;
+		font-family: 'Poppins-Light'
+	}
+
+	.menubar{							/*Oculta el menu de escritorio*/
+		display: none;
+	}
+
+	.head{							/*Oculta el head de escritorio*/
+		display: none;
+	}
+
+	.headphone{							/*Habilita el display para celulares*/
+		width: 100%;
+		height: 50px;
+		display: block;
+		background-color: red;
+	}
+
+	.headphone h4{
+		text-align: center;
+		float: left;
+	}
+
+	.menu{
+		float: right;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		background-color: blue;
+	}
+
+
+}
+
+@keyframes cambio{
+	0%{margin-left: 0;}
+	20%{margin-left: 0;}
+
+	25%{margin-left: -100%;}
+	45%{margin-left: -100%;}
+
+	50%{margin-left: -200%;}
+	70%{margin-left: -200%;}
+
+	75%{margin-left: -300%;}
+	100%{margin-left: -300%;}
+}
